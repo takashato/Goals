@@ -7,7 +7,7 @@ class LoginScreen extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(16.0),
       decoration: BoxDecoration(
-          color: Colors.amber
+          color: Colors.white
       ),
       alignment: Alignment(0.0,0.0),
       child: SignInForm(),

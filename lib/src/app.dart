@@ -10,16 +10,16 @@ class MyApp extends StatelessWidget {
       child: GoalsBlocProvider(
         child: MaterialApp(
           theme: ThemeData(
-            accentColor: Colors.black,
-            primaryColor: Colors.amber,
+            accentColor: Colors.white,
+            primaryColor: Colors.blue,
           ),
           home: Scaffold(
             appBar: AppBar(
               title: Text(
                 "Goals",
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: Colors.white),
               ),
-              backgroundColor: Colors.amber,
+              backgroundColor: Colors.blue,
               elevation: 0.0,
             ),
             body: LoginScreen(),

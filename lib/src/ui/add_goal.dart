@@ -44,9 +44,9 @@ class AddGoalsState extends State<AddGoalScreen> {
         appBar: AppBar(
           title: Text(
             "Add Goal",
-            style: TextStyle(color: Colors.black),
+            style: TextStyle(color: Colors.white),
           ),
-          backgroundColor: Colors.amber,
+          backgroundColor: Colors.blue,
           elevation: 0.0,
         ),
         body: Container(

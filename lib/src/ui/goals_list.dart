@@ -44,10 +44,10 @@ class GoalsListState extends State<GoalsList>
         title: Text(
           StringConstant.goalListTitle,
           style: TextStyle(
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
-        backgroundColor: Colors.amber,
+        backgroundColor: Colors.blue,
         elevation: 0.0,
         bottom: TabBar(
           controller: _tabController,
