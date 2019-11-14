@@ -127,15 +127,26 @@ class AddGoalsState extends State<AddGoalScreen> {
   }
 
   Widget submitButton() {
-    return RaisedButton(
-        textColor: Colors.white,
-        color: Colors.black,
-        child: Text("Submit"),
-        shape: RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(30.0)),
-        onPressed: () {
-          _bloc.submit(widget._emailAddress);
-        });
+    return StreamBuilder (
+        stream: _bloc.name,
+        builder: (BuildContext context1, AsyncSnapshot<String> snapshot1) {
+          return StreamBuilder (
+              stream: _bloc.goalMessage,
+              builder: (BuildContext context2, AsyncSnapshot<String> snapshot2) {
+                return RaisedButton(
+                  textColor: Colors.white,
+                  color: Colors.black,
+                  child: Text("Submit"),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(30.0)),
+                  onPressed: (snapshot1.hasData && snapshot2.hasData) ? () {
+                    _bloc.submit(widget._emailAddress);
+                  } : null,
+                );
+              }
+          );
+        }
+    );
   }
 
   Widget scanButton() {

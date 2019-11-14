@@ -20,7 +20,7 @@ class FirestoreProvider {
     return _firestore
         .collection("users")
         .document(email)
-        .setData({'email': email, 'password': password, 'goalAdded': false, 'goals': []});
+        .setData({'email': email, 'password': password, 'goalAdded': false});
   }
 
   Future<void> uploadGoal(String title, String documentId, String goal) async {
